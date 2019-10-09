@@ -10,8 +10,8 @@ function get_dist_name()
         setenforce 0
     elif grep -Eqi "Ubuntu" /etc/issue || grep -Eq "Ubuntu" /etc/*-release; then
         DISTRO='Ubuntu'
+        sudo -i
         ufw disable
-        setenforce 0
     fi
 }
 
